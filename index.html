@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Father's Day Fundraiser | Don Bosco Church CYF</title>
+  <meta name="description" content="Support the Catholic Youth Fellowship (CYF) of Don Bosco Church this Father's Day. Pre-order traditional homemade delicacies, Chak Hao Tan, chicken pickle, and snacks!">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Floating Background Canvas for Holy Glowing Particles -->
+  <canvas id="particle-canvas"></canvas>
+
+  <!-- Header & Navigation -->
+  <header class="main-header">
+    <div class="header-container">
+      <a href="#" class="logo-area" aria-label="Don Bosco Church CYF Home">
+        <!-- SVG Holy Dove & Cross Logo -->
+        <svg class="church-logo" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="50" cy="50" r="45" fill="none" stroke="var(--accent-gold)" stroke-width="2.5" stroke-dasharray="2 3"/>
+          <path d="M50,15 L50,75 M32,38 L68,38" stroke="var(--accent-gold)" stroke-width="5" stroke-linecap="round"/>
+          <path d="M43,45 C43,45 47,55 57,55 C67,55 72,48 72,48 C72,48 64,48 57,43 C50,38 43,45 43,45 Z" fill="var(--accent-blue)" opacity="0.8"/>
+          <path d="M50,45 C50,45 48,58 38,58 C28,58 24,50 24,50 C24,50 32,50 38,45 C44,40 50,45 50,45 Z" fill="var(--accent-blue)" opacity="0.8"/>
+        </svg>
+        <div class="logo-text">
+          <span class="church-name">Don Bosco Church</span>
+          <span class="cyf-tag">Catholic Youth Fellowship</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="nav-menu" id="nav-menu">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#gallery" class="nav-link">Gallery</a>
+        <a href="#food" class="nav-link">Food Delights</a>
+        <a href="#why-support" class="nav-link">Our Purpose</a>
+        <a href="#contact" class="nav-link">Contact</a>
+        <a href="#food" class="btn btn-primary nav-cta">Order Now</a>
+      </nav>
+
+      <!-- Mobile Hamburger Button -->
+      <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Navigation Menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- 1. Hero Section -->
+  <section class="hero-section" id="home">
+    <div class="hero-bg-overlay" style="background-image: linear-gradient(to bottom, rgba(255,255,255,0.85), rgba(255,255,255,0.95)), url('assets/hero_church.png');"></div>
+    <div class="hero-container">
+      <div class="hero-content reveal">
+        <!-- Floating Holy Cross Icon -->
+        <div class="holy-icon-wrapper">
+          <svg class="holy-cross" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 2v20M5 9h14" stroke-linecap="round"/>
+          </svg>
+        </div>
+        
+        <span class="hero-subtitle">DON BOSCO CHURCH CYF PRESENTS</span>
+        <h1 class="hero-title">Father's Day <br><span class="highlight-text">Fundraiser 2026</span></h1>
+        <p class="hero-tagline">"Homemade Good Food for a Great Cause"</p>
+        
+        <div class="special-offer-badge">
+          <svg class="gift-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M20 12v10H4V12M2 7h20v5H2zM12 22V7M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7zM12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/>
+          </svg>
+          <span class="offer-text"><strong>Special Offer:</strong> The first 10 pre-orders receive a surprise gift!</span>
+        </div>
+
+        <div class="hero-actions">
+          <a href="#food" class="btn btn-primary btn-large">Order Now</a>
+          <a href="#contact" class="btn btn-secondary btn-large">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. About The Fundraiser Section -->
+  <section class="about-section scroll-reveal" id="about">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-subtitle">Empowering Our Youth</span>
+        <h2 class="section-title">About The Fundraiser</h2>
+        <div class="decor-divider">
+          <span class="divider-line"></span>
+          <svg class="divider-dove" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22C17.5 22 22 17.5 22 12C22 8.5 20 6.5 17 6.5C16.5 6.5 16 6.8 15.5 7.2C15 6 14 5 12.5 5C12 5 11.5 5.2 11 5.6C10.5 4.5 9.5 3.8 8.2 3.8C8 3.8 7.8 3.8 7.6 3.9C9 2.7 10.4 2 12 2Z"/>
+          </svg>
+          <span class="divider-line"></span>
+        </div>
+      </div>
+
+      <div class="about-grid">
+        <!-- Card 1: Supporting Youth -->
+        <div class="about-card glass-card">
+          <div class="card-icon-box blue-theme">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
+          </div>
+          <h3>Youth Ministry Support</h3>
+          <p>This fundraiser is organized by the Catholic Youth Fellowship (CYF). All proceeds go directly to supporting youth leadership workshops, spiritual retreats, and parish community camps.</p>
+        </div>
+
+        <!-- Card 2: Community Involvement -->
+        <div class="about-card glass-card">
+          <div class="card-icon-box gold-theme">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+          </div>
+          <h3>Community Fellowship</h3>
+          <p>Bringing families together to celebrate fathers, grandfathers, and father-figures, while fostering deep communal ties within the Don Bosco parish community.</p>
+        </div>
+
+        <!-- Card 3: Prepared with Care -->
+        <div class="about-card glass-card">
+          <div class="card-icon-box green-theme">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+            </svg>
+          </div>
+          <h3>Homemade with Love</h3>
+          <p>Every single delicacy is prepared in home kitchens by parishioners, using fresh ingredients, traditional family recipes, and strict hygiene standards.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Church Gallery Section -->
+  <section class="gallery-section scroll-reveal" id="gallery">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-subtitle">Parish Life & Fellowship</span>
+        <h2 class="section-title">Our Church Gallery</h2>
+        <div class="decor-divider">
+          <span class="divider-line"></span>
+          <svg class="divider-dove" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22C17.5 22 22 17.5 22 12C22 8.5 20 6.5 17 6.5C16.5 6.5 16 6.8 15.5 7.2C15 6 14 5 12.5 5C12 5 11.5 5.2 11 5.6C10.5 4.5 9.5 3.8 8.2 3.8C8 3.8 7.8 3.8 7.6 3.9C9 2.7 10.4 2 12 2Z"/>
+          </svg>
+          <span class="divider-line"></span>
+        </div>
+      </div>
+
+      <div class="gallery-grid">
+        <!-- Photo 1 -->
+        <div class="gallery-item" data-image="assets/church_building.png" data-title="Don Bosco Church Sanctuary" data-desc="Our main church sanctuary stands as a beacon of faith, growth, and divine blessing in our community.">
+          <div class="gallery-img-wrapper">
+            <img src="assets/church_building.png" alt="Don Bosco Church Building" loading="lazy">
+            <div class="gallery-overlay">
+              <span class="zoom-icon">+</span>
+              <h4>Sanctuary Building</h4>
+              <p>Don Bosco Parish</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Photo 2 -->
+        <div class="gallery-item" data-image="assets/hero_church.png" data-title="Parish Prayer & Mass Gathering" data-desc="Parishioners and families coming together inside the sanctuary for divine worship, adoration, and holy Eucharist.">
+          <div class="gallery-img-wrapper">
+            <img src="assets/hero_church.png" alt="Parish Prayer Gathering" loading="lazy">
+            <div class="gallery-overlay">
+              <span class="zoom-icon">+</span>
+              <h4>Prayer & Worship</h4>
+              <p>Gathering of Faith</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Photo 3 -->
+        <div class="gallery-item" data-image="assets/delicacies.png" data-title="Youth Fellowship Baking Sessions" data-desc="CYF youth members working diligently to prepare traditional cookies and baked items for the parish feast.">
+          <div class="gallery-img-wrapper">
+            <img src="assets/delicacies.png" alt="CYF Youth Fellowship Activity" loading="lazy">
+            <div class="gallery-overlay">
+              <span class="zoom-icon">+</span>
+              <h4>Youth Baking</h4>
+              <p>Fellowship Activities</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Photo 4 -->
+        <div class="gallery-item" data-image="assets/snacks.png" data-title="Parish Celebrations & Food Prep" data-desc="Parish elders guiding the youth in preparing savory homemade snacks, bridging generations during church events.">
+          <div class="gallery-img-wrapper">
+            <img src="assets/snacks.png" alt="Church Celebrations Preparation" loading="lazy">
+            <div class="gallery-overlay">
+              <span class="zoom-icon">+</span>
+              <h4>Parish Celebration Prep</h4>
+              <p>Feast & Fellowship</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox Modal -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image Lightbox">
+    <button class="lightbox-close" id="lightbox-close" aria-label="Close lightbox">&times;</button>
+    <button class="lightbox-nav prev" id="lightbox-prev" aria-label="Previous image">&#10094;</button>
+    <button class="lightbox-nav next" id="lightbox-next" aria-label="Next image">&#10095;</button>
+    <div class="lightbox-content">
+      <img id="lightbox-img" src="" alt="">
+      <div class="lightbox-caption">
+        <h3 id="lightbox-title"></h3>
+        <p id="lightbox-desc"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4. Food Showcase Section -->
+  <section class="food-section scroll-reveal" id="food">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-subtitle">Prepared with Blessings</span>
+        <h2 class="section-title">Father's Day Special Menu</h2>
+        <div class="decor-divider">
+          <span class="divider-line"></span>
+          <svg class="divider-dove" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22C17.5 22 22 17.5 22 12C22 8.5 20 6.5 17 6.5C16.5 6.5 16 6.8 15.5 7.2C15 6 14 5 12.5 5C12 5 11.5 5.2 11 5.6C10.5 4.5 9.5 3.8 8.2 3.8C8 3.8 7.8 3.8 7.6 3.9C9 2.7 10.4 2 12 2Z"/>
+          </svg>
+          <span class="divider-line"></span>
+        </div>
+      </div>
+
+      <div class="food-grid">
+        <!-- Item 1: Chak Hao Tan -->
+        <div class="food-card">
+          <div class="food-img-wrapper">
+            <img src="assets/chak_hao_tan.png" alt="Chak Hao Tan" loading="lazy">
+            <span class="food-tag">Highly Recommended</span>
+          </div>
+          <div class="food-info">
+            <h3 class="food-name">Chak Hao Tan</h3>
+            <p class="food-desc">A premium, aromatic traditional Manipuri black rice dessert. Slow-cooked with fresh milk, sweetened delicately, and garnished with premium dry fruits, coconuts, and blessings.</p>
+            <div class="food-footer">
+              <span class="food-origin">Traditional delicacy</span>
+              <a href="https://wa.me/918132991890?text=Hello,%20I'd%20like%20to%20order%20Chak%20Hao%20Tan" class="btn btn-outline btn-small" target="_blank" rel="noopener">Order on WhatsApp</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 2: Homemade Chicken Pickle -->
+        <div class="food-card">
+          <div class="food-img-wrapper">
+            <img src="assets/chicken_pickle.png" alt="Homemade Chicken Pickle" loading="lazy">
+            <span class="food-tag">Parish Favorite</span>
+          </div>
+          <div class="food-info">
+            <h3 class="food-name">Homemade Chicken Pickle</h3>
+            <p class="food-desc">Succulent chicken pieces cooked to perfection, preserved in rich aromatic spices, cold-pressed oils, and fresh curry leaves. Zero artificial preservatives. A true burst of homemade flavors.</p>
+            <div class="food-footer">
+              <span class="food-origin">Rich & spicy pickle</span>
+              <a href="https://wa.me/918132991890?text=Hello,%20I'd%20like%20to%20order%20Homemade%20Chicken%20Pickle" class="btn btn-outline btn-small" target="_blank" rel="noopener">Order on WhatsApp</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 3: Traditional Homemade Delicacies -->
+        <div class="food-card">
+          <div class="food-img-wrapper">
+            <img src="assets/delicacies.png" alt="Traditional Delicacies" loading="lazy">
+            <span class="food-tag">Sweet Blessings</span>
+          </div>
+          <div class="food-info">
+            <h3 class="food-name">Traditional Delicacies</h3>
+            <p class="food-desc">A festive curation of traditional sweet treats and baked goods made from local ingredients. Perfect for sharing with the family during your Father's Day lunchtime celebration.</p>
+            <div class="food-footer">
+              <span class="food-origin">Assorted Sweets Platter</span>
+              <a href="https://wa.me/918132991890?text=Hello,%20I'd%20like%20to%20order%20Traditional%20Homemade%20Delicacies" class="btn btn-outline btn-small" target="_blank" rel="noopener">Order on WhatsApp</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 4: Homemade Snacks -->
+        <div class="food-card">
+          <div class="food-img-wrapper">
+            <img src="assets/snacks.png" alt="Homemade Snacks" loading="lazy">
+            <span class="food-tag">Freshly Fried</span>
+          </div>
+          <div class="food-info">
+            <h3 class="food-name">Homemade Snacks</h3>
+            <p class="food-desc">Crispy, crunchy, and savory traditional snacks, prepared with absolute hygienic care. The perfect accompaniment for your evening tea or gathering with your father.</p>
+            <div class="food-footer">
+              <span class="food-origin">Crunchy tea-time snacks</span>
+              <a href="https://wa.me/918132991890?text=Hello,%20I'd%20like%20to%20order%20Homemade%20Snacks" class="btn btn-outline btn-small" target="_blank" rel="noopener">Order on WhatsApp</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 5: Freshly Prepared Special Items -->
+        <div class="food-card">
+          <div class="food-img-wrapper">
+            <!-- Reuse building interior image or delicacies, we can style it beautifully -->
+            <img src="assets/hero_church.png" alt="Special Items Prep" loading="lazy" style="filter: hue-rotate(15deg) contrast(1.15);">
+            <span class="food-tag">Chef's Special</span>
+          </div>
+          <div class="food-info">
+            <h3 class="food-name">Fresh Special Items</h3>
+            <p class="food-desc">Weekly special dishes prepared dynamically by our CYF culinary team. Inquire on WhatsApp to find out the special Father's Day roast menu items available for order.</p>
+            <div class="food-footer">
+              <span class="food-origin">Inquire for details</span>
+              <a href="https://wa.me/918132991890?text=Hello,%20what%20are%20the%20Freshly%20Prepared%20Special%20Items%20available%20for%20Father's%20Day?" class="btn btn-outline btn-small" target="_blank" rel="noopener">Inquire Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Father's Day Blessing Section -->
+  <section class="blessing-section scroll-reveal">
+    <div class="blessing-overlay"></div>
+    <div class="blessing-container">
+      <div class="blessing-content">
+        <!-- SVG Holy Cross Silhouette -->
+        <svg class="blessing-cross" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <path d="M50,10 L50,90 M30,35 L70,35" stroke="var(--accent-gold)" stroke-width="4" stroke-linecap="round" fill="none" opacity="0.6"/>
+        </svg>
+        
+        <blockquote class="bible-verse">
+          "Honor your father and your mother, that your days may be long in the land that the Lord your God is giving you."
+        </blockquote>
+        <cite class="bible-reference">Exodus 20:12</cite>
+        
+        <p class="blessing-subtext">Wishing a peaceful, blessed, and joyful Father's Day to all fathers, mentors, and guardians in our community.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Why Support This Fundraiser Section -->
+  <section class="why-section scroll-reveal" id="why-support">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-subtitle">Making A Difference</span>
+        <h2 class="section-title">Why Support This Fundraiser?</h2>
+        <div class="decor-divider">
+          <span class="divider-line"></span>
+          <svg class="divider-dove" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22C17.5 22 22 17.5 22 12C22 8.5 20 6.5 17 6.5C16.5 6.5 16 6.8 15.5 7.2C15 6 14 5 12.5 5C12 5 11.5 5.2 11 5.6C10.5 4.5 9.5 3.8 8.2 3.8C8 3.8 7.8 3.8 7.6 3.9C9 2.7 10.4 2 12 2Z"/>
+          </svg>
+          <span class="divider-line"></span>
+        </div>
+      </div>
+
+      <div class="why-grid">
+        <!-- Interactive Card 1 -->
+        <div class="why-card glass-card">
+          <div class="why-number">01</div>
+          <h3>Support Church Youth</h3>
+          <p>Directly funds youth ministry activities, leadership training, and youth events that nurture spiritual growth and community service.</p>
+        </div>
+
+        <!-- Interactive Card 2 -->
+        <div class="why-card glass-card">
+          <div class="why-number">02</div>
+          <h3>Support Community Programs</h3>
+          <p>Helps support parish outreach programs for families in need, children's catechism camps, and charitable assistance projects.</p>
+        </div>
+
+        <!-- Interactive Card 3 -->
+        <div class="why-card glass-card">
+          <div class="why-number">03</div>
+          <h3>Celebrate Father's Day</h3>
+          <p>Treat your father with authentic, delicious, handmade food while showing deep appreciation for all their love and sacrifice.</p>
+        </div>
+
+        <!-- Interactive Card 4 -->
+        <div class="why-card glass-card">
+          <div class="why-number">04</div>
+          <h3>Enjoy Homemade Food</h3>
+          <p>Relish authentic, highly hygienic, and delicious recipes crafted by parish mothers and youth with traditional culinary passion.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. Contact Section -->
+  <section class="contact-section scroll-reveal" id="contact">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-subtitle">Get In Touch</span>
+        <h2 class="section-title">Order & Inquiry Channels</h2>
+        <div class="decor-divider">
+          <span class="divider-line"></span>
+          <svg class="divider-dove" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22C17.5 22 22 17.5 22 12C22 8.5 20 6.5 17 6.5C16.5 6.5 16 6.8 15.5 7.2C15 6 14 5 12.5 5C12 5 11.5 5.2 11 5.6C10.5 4.5 9.5 3.8 8.2 3.8C8 3.8 7.8 3.8 7.6 3.9C9 2.7 10.4 2 12 2Z"/>
+          </svg>
+          <span class="divider-line"></span>
+        </div>
+      </div>
+
+      <div class="contact-card glass-card">
+        <div class="contact-info-grid">
+          <div class="contact-item">
+            <div class="contact-icon gold-theme">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+              </svg>
+            </div>
+            <h4>Call Us Directly</h4>
+            <p class="contact-number">+91 81329 91890</p>
+            <a href="tel:8132991890" class="btn btn-primary btn-full-mobile">Call Now</a>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon green-theme">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+              </svg>
+            </div>
+            <h4>Chat on WhatsApp</h4>
+            <p class="contact-number">+91 81329 91890</p>
+            <a href="https://wa.me/918132991890" target="_blank" rel="noopener" class="btn btn-success btn-full-mobile">WhatsApp Chat</a>
+          </div>
+        </div>
+
+        <div class="gift-reminder">
+          <svg viewBox="0 0 24 24" fill="none" stroke="var(--accent-gold)" stroke-width="2" width="32" height="32">
+            <circle cx="12" cy="12" r="10"/>
+            <line x1="12" y1="16" x2="12" y2="12"/>
+            <line x1="12" y1="8" x2="12.01" y2="8"/>
+          </svg>
+          <p>Friendly Reminder: The first 10 pre-orders receive a special surprise token of appreciation! Secure yours early.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. Location Section -->
+  <section class="location-section scroll-reveal" id="location">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-subtitle">Find Us</span>
+        <h2 class="section-title">Our Church Location</h2>
+        <div class="decor-divider">
+          <span class="divider-line"></span>
+          <svg class="divider-dove" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22C17.5 22 22 17.5 22 12C22 8.5 20 6.5 17 6.5C16.5 6.5 16 6.8 15.5 7.2C15 6 14 5 12.5 5C12 5 11.5 5.2 11 5.6C10.5 4.5 9.5 3.8 8.2 3.8C8 3.8 7.8 3.8 7.6 3.9C9 2.7 10.4 2 12 2Z"/>
+          </svg>
+          <span class="divider-line"></span>
+        </div>
+      </div>
+
+      <div class="map-card glass-card">
+        <!-- High-quality stylized vector map placeholder -->
+        <div class="map-placeholder">
+          <svg class="map-graphic" viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
+            <rect width="100%" height="100%" fill="#f1f5f9"/>
+            <!-- Roads -->
+            <path d="M-10,100 L410,100 M200,-10 L200,210 M80,-10 L320,210" stroke="#cbd5e1" stroke-width="20" fill="none"/>
+            <path d="M-10,100 L410,100 M200,-10 L200,210 M80,-10 L320,210" stroke="#f8fafc" stroke-width="14" fill="none"/>
+            <!-- River/Greenery -->
+            <circle cx="60" cy="50" r="40" fill="#dcfce7" opacity="0.6"/>
+            <circle cx="340" cy="150" r="50" fill="#e0f2fe" opacity="0.6"/>
+            <!-- Church Pin -->
+            <g transform="translate(200, 100)">
+              <circle cx="0" cy="0" r="16" fill="var(--accent-blue-light)"/>
+              <path d="M0,-24 C-8,-24 -12,-16 -12,-8 C-12,8 0,24 0,24 C0,24 12,8 12,-8 C12,-16 8,-24 0,-24 Z" fill="var(--accent-gold)"/>
+              <!-- Inner Cross -->
+              <path d="M0,-14 L0,-2 M-4,-10 L4,-10" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+            </g>
+          </svg>
+          <div class="map-overlay-details">
+            <h3>Don Bosco Church</h3>
+            <p>Catholic Youth Fellowship (CYF) Center</p>
+            <p>Parish Main Grounds & Youth Hall</p>
+          </div>
+        </div>
+        <div class="map-footer">
+          <a href="https://maps.google.com/?q=Don+Bosco+Church" target="_blank" rel="noopener" class="btn btn-secondary">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18" style="display:inline-block; vertical-align:middle; margin-right:6px;">
+              <polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21"/>
+              <line x1="9" y1="3" x2="9" y2="18"/>
+              <line x1="15" y1="6" x2="15" y2="21"/>
+            </svg>
+            Get Directions
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. Footer Section -->
+  <footer class="main-footer">
+    <div class="footer-container">
+      <div class="footer-branding">
+        <h3>Don Bosco Church CYF</h3>
+        <p class="footer-desc">Nurturing young minds, serving the church, strengthening parish faith.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Fundraiser 2026</h4>
+        <p>"Homemade Good Food for a Great Cause"</p>
+        <p>In service of youth ministry activities & community blessings.</p>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact CYF</h4>
+        <p>Phone: +91 81329 91890</p>
+        <p>WhatsApp: +91 81329 91890</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Don Bosco Church CYF. All Rights Reserved. Prepared with faith and fellowship.</p>
+    </div>
+  </footer>
+
+  <!-- Sticky Bottom Contact Bar for Mobile -->
+  <div class="sticky-contact-bar" id="sticky-contact-bar">
+    <a href="tel:8132991890" class="sticky-btn call-btn">
+      <span class="btn-icon">📞</span> Call Now
+    </a>
+    <a href="https://wa.me/918132991890" class="sticky-btn whatsapp-btn">
+      <span class="btn-icon">💬</span> WhatsApp
+    </a>
+  </div>
+
+  <!-- Main JavaScript File -->
+  <script src="script.js"></script>
+</body>
+</html>
